@@ -35,11 +35,11 @@
 	};																				\
 																					\
 	struct Deque_##t##_Iterator{													\
-			int current;															\
-			Deque_##t *dp;															\
-			void (*inc)(Deque_##t##_Iterator *it);									\
-			void (*dec)(Deque_##t##_Iterator *it);									\
-			t  & (*deref)(Deque_##t##_Iterator *it);								\
+		int current;															\
+		Deque_##t *dp;															\
+		void (*inc)(Deque_##t##_Iterator *it);									\
+		void (*dec)(Deque_##t##_Iterator *it);									\
+		t  & (*deref)(Deque_##t##_Iterator *it);								\
 	};																				\
 	void Deque_##t##_Iterator_inc(Deque_##t##_Iterator *it){						\
 		it->current=(it->current+1) % (it->dp->capacity);																\
